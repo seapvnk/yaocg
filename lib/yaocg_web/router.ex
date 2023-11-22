@@ -7,6 +7,9 @@ defmodule YaocgWeb.Router do
 
   scope "/api", YaocgWeb do
     pipe_through :api
+
+    post "/signup", AccountsController, :signup
+    post "/signin", AccountsController, :signin
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
